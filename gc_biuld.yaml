@@ -1,0 +1,17 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1      #TKG API endpoint
+kind: TanzuKubernetesCluster                   #required parameter
+metadata:
+  name: demo-cluster                          #cluster name, user defined
+  namespace: william                       #supervisor namespace
+spec:
+  distribution:
+    version: v1.16.8                         #resolved kubernetes version v1.16.8
+  topology:
+    controlPlane:
+      count: 1                                 #number of control plane nodes
+      class: best-effort-small                 #vmclass for control plane nodes
+      storageClass: k8s-storage-policy         #storageclass for control plane
+    workers:
+      count: 1                                 #number of worker nodes
+      class: best-effort-small                 #vmclass for worker nodes
+      storageClass: k8s-storage-policy         #storageclass for worker nodes
