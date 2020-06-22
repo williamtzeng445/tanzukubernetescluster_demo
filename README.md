@@ -37,7 +37,7 @@
   If the context you wish to use is not in this list, you may need to try
   logging in again later, or contact your cluster administrator.
 
-  To change context, use `kubectl config use-context <workload name$`
+  To change context, use `kubectl config use-context <workload name>`
 ```
 2. 切換 Namespace 語法
 ```bash
@@ -49,3 +49,18 @@
 ```bash
   $ kubectl get all
 ```
+
+### Virtual Machine Class Types基本架構
+
+Class               | CPU |Memory(GB)|Storage (GB)|Reserved CPU and Memory
+--------------------|----:|---------:|-----------:|-----------------------
+`guaranteed-xlarge` |  `4`|      `32`|        `16`| Yes
+`best-effort-xlarge`|  `4`|      `32`|        `16`| Yes
+`guaranteed-large`  |  `4`|      `16`|        `16`| Yes
+`best-effort-large` |  `4`|      `16`|        `16`| Yes
+`guaranteed-medium` |  `2`|       `8`|        `16`| Yes
+`best-effort-medium`|  `2`|       `8`|        `16`| Yes
+`guaranteed-small`  |  `2`|       `4`|        `16`| Yes
+`best-effort-small` |  `2`|       `4`|        `16`| Yes
+`guaranteed-xsmall` |  `2`|       `2`|        `16`| Yes
+`best-effort-xsmall`|  `2`|       `2`|        `16`| Yes
