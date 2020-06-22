@@ -2,12 +2,19 @@
 
 ## Yaml檔使用建議
 1. gc_biuld.yaml
+   
    Create Tanzu Kubernetes Cluster (Guest Cluster)
+***
 2. yelb_demo_gc.yaml
+
    Demo yelb used storageclass "gold", with PVC
+***
 3. yelb_demo_sc.yaml
+   
    Demo pure yelb 
-4. psp.yaml
+***
+1. psp.yaml
+   
    Guset Cluster RBAC
 
 
